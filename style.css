@@ -1,7 +1,10 @@
 .container {
     display: flex;
   }
-  
+  h3{
+      margin-left: 10px;
+      font-size: 40px;
+  }
   #start-button1{
     background-color: red;
     color: whitesmoke;
