@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentPosition = 4
     let currentRotation = 0
   
-    console.log(theTetrominoes[0][0])
+    // console.log(theTetrominoes[0][0])
   
     let random = Math.floor(Math.random()*theTetrominoes.length)
     let current = theTetrominoes[random][currentRotation]
@@ -74,6 +74,22 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[currentPosition + index].style.backgroundColor = ''
   
       })
+    }
+
+    const level = document.getElementById("start-button2");
+    let speed = 0;
+    // const myLevel;
+
+    level.addEventListener("change", getLevel);
+
+    function getLevel() {
+      let myLevel = level.value;
+
+      if(myLevel === "easy") {
+        speed = 1000;
+      }else if(myLevel = "difficult"){
+        speed = 200;
+      }
     }
   
 
@@ -207,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timerId = null
       } else {
         draw()
-        timerId = setInterval(moveDown, 1000)
+        timerId = setInterval(moveDown, speed)
         nextRandom = Math.floor(Math.random()*theTetrominoes.length)
         displayShape()
       }
