@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const level = document.getElementById("start-button2");
-    let speed = 0;
+    let speed = 2000;
     // const myLevel;
 
     level.addEventListener("change", getLevel);
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if(myLevel === "easy") {
         speed = 1000;
       }else if(myLevel = "difficult"){
-        speed = 200;
+        speed = 100;
       }
     }
   
